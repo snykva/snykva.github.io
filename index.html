@@ -1,0 +1,1933 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_abca324e1dab8ff6d315dd72c2a00932 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_abca324e1dab8ff6d315dd72c2a00932" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_abca324e1dab8ff6d315dd72c2a00932 = L.map(
+                "map_abca324e1dab8ff6d315dd72c2a00932",
+                {
+                    center: [55.75, 37.6],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_385e605eb5dd69ee708b128d3a666dd6 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_abca324e1dab8ff6d315dd72c2a00932);
+        
+    
+            var marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d = L.markerClusterGroup(
+                {}
+            );
+            map_abca324e1dab8ff6d315dd72c2a00932.addLayer(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var marker_6729316ad0c69480f6d1ba034994561f = L.marker(
+                [55.67309, 37.735497],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_05e67f2bb10a77930ed505d2fe2afc2b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_6729316ad0c69480f6d1ba034994561f.setIcon(icon_05e67f2bb10a77930ed505d2fe2afc2b);
+        
+    
+        var popup_dce2fe5261606a733d91792ae54cb9eb = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_04071b3c916d5fb2c224009ac6892a09 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JXQs9C+0YDRjNC10LLRgdC60LjQuSDQv9GALiwgMtCQLCDRgdGC0YAuIDE5LCDQnNC+0YHQutCy0LDRjdGC0LDQtiAyLCDQvtGE0LjRgSA2PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4tINC/0YIuOjA5OjAwIC0gMTg6MzAKPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_dce2fe5261606a733d91792ae54cb9eb.setContent(i_frame_04071b3c916d5fb2c224009ac6892a09);
+            
+        
+
+        marker_6729316ad0c69480f6d1ba034994561f.bindPopup(popup_dce2fe5261606a733d91792ae54cb9eb)
+        ;
+
+        
+    
+    
+            marker_6729316ad0c69480f6d1ba034994561f.bindTooltip(
+                `<div>
+                     <i> Фрезер</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_f12f747ae8d35a025a7cc2fba66a474a = L.marker(
+                [55.661595, 37.799548],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_b659267c481d5f0556f2e4873f008005 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_f12f747ae8d35a025a7cc2fba66a474a.setIcon(icon_b659267c481d5f0556f2e4873f008005);
+        
+    
+        var popup_1cb5290893ab58bb69574e7d66776041 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_f19f076c456404bb52125cc84346757a = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0JLQtdGA0YXQvdC40LUg0J/QvtC70Y8sIDUx0JEsINCc0L7RgdC60LLQsDwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCa0YDRg9Cz0LvQvtGB0YPRgtC+0YfQvdC+Lgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_1cb5290893ab58bb69574e7d66776041.setContent(i_frame_f19f076c456404bb52125cc84346757a);
+            
+        
+
+        marker_f12f747ae8d35a025a7cc2fba66a474a.bindPopup(popup_1cb5290893ab58bb69574e7d66776041)
+        ;
+
+        
+    
+    
+            marker_f12f747ae8d35a025a7cc2fba66a474a.bindTooltip(
+                `<div>
+                     <i>АКБ ЭнергоМет</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_86cde004fbd26c4ef536c554f38f6c89 = L.marker(
+                [55.664252, 37.707548],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_42667a1de01a76abf553e4080e24e978 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_86cde004fbd26c4ef536c554f38f6c89.setIcon(icon_42667a1de01a76abf553e4080e24e978);
+        
+    
+        var popup_97ed328f0e2a5e4d9c9f3bd524f3ea49 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_bee39f3c468b7ab21d24ba8214c98de0 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0KjQvtGB0YHQtdC50L3QsNGPINGD0LsuLCA5MCwg0YHRgtGALiAxLCDQnNC+0YHQutCy0LA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_97ed328f0e2a5e4d9c9f3bd524f3ea49.setContent(i_frame_bee39f3c468b7ab21d24ba8214c98de0);
+            
+        
+
+        marker_86cde004fbd26c4ef536c554f38f6c89.bindPopup(popup_97ed328f0e2a5e4d9c9f3bd524f3ea49)
+        ;
+
+        
+    
+    
+            marker_86cde004fbd26c4ef536c554f38f6c89.bindTooltip(
+                `<div>
+                     <i>Арсеналмет</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_3e4fe0fe6dd0db7d4e95a0d20e8a6912 = L.marker(
+                [55.839018, 37.530308],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_9444fc37ab4954f4f437cbaff99c4595 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_3e4fe0fe6dd0db7d4e95a0d20e8a6912.setIcon(icon_9444fc37ab4954f4f437cbaff99c4595);
+        
+    
+        var popup_8b99829c0db99c9061c0ac99a95b54b5 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_80b687582159b34d78f51a9271bd1309 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JzQuNGF0LDQu9C60L7QstGB0LrQsNGPINGD0LsuLCAyMCwg0JzQvtGB0LrQstCwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4tINCy0YEuOiAwOTowMCAtIDIyOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_8b99829c0db99c9061c0ac99a95b54b5.setContent(i_frame_80b687582159b34d78f51a9271bd1309);
+            
+        
+
+        marker_3e4fe0fe6dd0db7d4e95a0d20e8a6912.bindPopup(popup_8b99829c0db99c9061c0ac99a95b54b5)
+        ;
+
+        
+    
+    
+            marker_3e4fe0fe6dd0db7d4e95a0d20e8a6912.bindTooltip(
+                `<div>
+                     <i>Пункт приёма батареек и крышечек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d2db93dfe808e1718da3a93cfc1a1a5d = L.marker(
+                [55.817991, 37.509478],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_7e4d81b2ea8c5530af6be4d8d2b85299 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d2db93dfe808e1718da3a93cfc1a1a5d.setIcon(icon_7e4d81b2ea8c5530af6be4d8d2b85299);
+        
+    
+        var popup_bfded6775d21fde535067f9082c7d3f7 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_a3a5b87982433787318b3337969720d1 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+Mi3QuSDQndC+0LLQvtC/0L7QtNC80L7RgdC60L7QstC90YvQuSDQv9C10YAuLCAzLCDQnNC+0YHQutCy0LA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9Li0g0LLRgS46IDA4OjAwIC0gMjI6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_bfded6775d21fde535067f9082c7d3f7.setContent(i_frame_a3a5b87982433787318b3337969720d1);
+            
+        
+
+        marker_d2db93dfe808e1718da3a93cfc1a1a5d.bindPopup(popup_bfded6775d21fde535067f9082c7d3f7)
+        ;
+
+        
+    
+    
+            marker_d2db93dfe808e1718da3a93cfc1a1a5d.bindTooltip(
+                `<div>
+                     <i>Пункт приёма батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_4bdd945f935d44d67dd2f6a1962f20d3 = L.marker(
+                [55.839882, 37.49112],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_54f41c70495aa5606e477a189bac06c4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_4bdd945f935d44d67dd2f6a1962f20d3.setIcon(icon_54f41c70495aa5606e477a189bac06c4);
+        
+    
+        var popup_74be3371dddd82b046130f64fd4fec42 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_9fd8dc8859598cddd7618d016702cc73 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JPQvtC70L7QstC40L3RgdC60L7QtSDRiC4sIDXQkCwg0JzQvtGB0LrQstCwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4tINCy0YEuOiAxMDowMCAtIDIyOjAwLiAKPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_74be3371dddd82b046130f64fd4fec42.setContent(i_frame_9fd8dc8859598cddd7618d016702cc73);
+            
+        
+
+        marker_4bdd945f935d44d67dd2f6a1962f20d3.bindPopup(popup_74be3371dddd82b046130f64fd4fec42)
+        ;
+
+        
+    
+    
+            marker_4bdd945f935d44d67dd2f6a1962f20d3.bindTooltip(
+                `<div>
+                     <i>Зелёная капля</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7d9829bc8ac088b77a80b75a1c091ac6 = L.marker(
+                [55.818167, 37.630852],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_b94698e752132b2f25891231735ebede = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7d9829bc8ac088b77a80b75a1c091ac6.setIcon(icon_b94698e752132b2f25891231735ebede);
+        
+    
+        var popup_c196228310da3bcc1cd71d8f58bbd5ad = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_9bd3a3243233295f989217c5ea6436e2 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0KbQsNC90LTQtdGA0LAsIDgsINCc0L7RgdC60LLQsDwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCf0L0uLSDQstGBLjogMDg6MDAgLSAyMjowMCAKPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_c196228310da3bcc1cd71d8f58bbd5ad.setContent(i_frame_9bd3a3243233295f989217c5ea6436e2);
+            
+        
+
+        marker_7d9829bc8ac088b77a80b75a1c091ac6.bindPopup(popup_c196228310da3bcc1cd71d8f58bbd5ad)
+        ;
+
+        
+    
+    
+            marker_7d9829bc8ac088b77a80b75a1c091ac6.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_11eb79ee18db0a4d51336a939f2cb2e2 = L.marker(
+                [55.808973, 37.462188],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_3c65a43f746fa0fb88e9ce42822cc374 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_11eb79ee18db0a4d51336a939f2cb2e2.setIcon(icon_3c65a43f746fa0fb88e9ce42822cc374);
+        
+    
+        var popup_308e5d55fb85e3f0970d98a7f0c96c67 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_e8c43fbcc7249cccca5501a03801e509 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0JzQsNGA0YjQsNC70LAg0JLQsNGB0LjQu9C10LLRgdC60L7Qs9C+LCAxNywg0JzQvtGB0LrQstCwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizogINCf0L0uLSDQstGBLjogMDc6MDAgLSAyMzo0NS4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_308e5d55fb85e3f0970d98a7f0c96c67.setContent(i_frame_e8c43fbcc7249cccca5501a03801e509);
+            
+        
+
+        marker_11eb79ee18db0a4d51336a939f2cb2e2.bindPopup(popup_308e5d55fb85e3f0970d98a7f0c96c67)
+        ;
+
+        
+    
+    
+            marker_11eb79ee18db0a4d51336a939f2cb2e2.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_71170fbbd15062905d94bac3173bda13 = L.marker(
+                [55.73122, 37.412945],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_dd511b3d9ca2d090a3b4705bc9ed7895 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_71170fbbd15062905d94bac3173bda13.setIcon(icon_dd511b3d9ca2d090a3b4705bc9ed7895);
+        
+    
+        var popup_50bc2531050da0cbc746858a33eeb6a1 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_4dda6f4e6ebf4b69eaafa31a8960a282 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JrRg9C90YbQtdCy0YHQutCw0Y8g0YPQuy4sIDEwLCDQnNC+0YHQutCy0LA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9Li0g0LLRgS46IDA5OjAwIC0gMjI6MDAuIAo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_50bc2531050da0cbc746858a33eeb6a1.setContent(i_frame_4dda6f4e6ebf4b69eaafa31a8960a282);
+            
+        
+
+        marker_71170fbbd15062905d94bac3173bda13.bindPopup(popup_50bc2531050da0cbc746858a33eeb6a1)
+        ;
+
+        
+    
+    
+            marker_71170fbbd15062905d94bac3173bda13.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9508bf1feea29d18f2aa24240e9a68e0 = L.marker(
+                [55.717973, 37.4613],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_ffd4265e7614cafb8fa3e6530fbbc1d8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9508bf1feea29d18f2aa24240e9a68e0.setIcon(icon_ffd4265e7614cafb8fa3e6530fbbc1d8);
+        
+    
+        var popup_a92095994434892dd5fae7674e1a03c2 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_718467261138ddb26f7800c17ab06364 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JrRgNC10LzQtdC90YfRg9Cz0YHQutCw0Y8g0YPQuy4sIDIyLCDQnNC+0YHQutCy0LA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9Li0g0LLRgS46IDA5OjAwIC0gMjI6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_a92095994434892dd5fae7674e1a03c2.setContent(i_frame_718467261138ddb26f7800c17ab06364);
+            
+        
+
+        marker_9508bf1feea29d18f2aa24240e9a68e0.bindPopup(popup_a92095994434892dd5fae7674e1a03c2)
+        ;
+
+        
+    
+    
+            marker_9508bf1feea29d18f2aa24240e9a68e0.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_832734b560aa225ecd8e1fc0d1f7c99d = L.marker(
+                [55.782689, 37.484407],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_451e83316d2b0b6007f328e073522b14 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_832734b560aa225ecd8e1fc0d1f7c99d.setIcon(icon_451e83316d2b0b6007f328e073522b14);
+        
+    
+        var popup_0648f126d7dded3b09022aec255b798a = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_b5090e2f24997b3ec6e7861f2ed67b6c = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0JzQsNGA0YjQsNC70LAg0KLRg9GF0LDRh9C10LLRgdC60L7Qs9C+LCAxNiwg0LrQvtGA0L8uIDEsINCc0L7RgdC60LLQsDwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCf0L0uIC0g0LLRgS46IDA4OjAwIC0gMjM6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_0648f126d7dded3b09022aec255b798a.setContent(i_frame_b5090e2f24997b3ec6e7861f2ed67b6c);
+            
+        
+
+        marker_832734b560aa225ecd8e1fc0d1f7c99d.bindPopup(popup_0648f126d7dded3b09022aec255b798a)
+        ;
+
+        
+    
+    
+            marker_832734b560aa225ecd8e1fc0d1f7c99d.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_47dd0771be835153eba1602cc18c6640 = L.marker(
+                [55.847831, 37.349712],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_03eb61d851dc89a7686654d2ccb0d416 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_47dd0771be835153eba1602cc18c6640.setIcon(icon_03eb61d851dc89a7686654d2ccb0d416);
+        
+    
+        var popup_3ab762d2520f778963dcb9237fddde52 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_800733c9719290647027e2d0e2866ab0 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+My3QuSDQnNC40YLQuNC90YHQutC40Lkg0L/QtdGALiwgMywg0JzQvtGB0LrQstCwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjogMDg6MDAgLSAyMjowMC4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_3ab762d2520f778963dcb9237fddde52.setContent(i_frame_800733c9719290647027e2d0e2866ab0);
+            
+        
+
+        marker_47dd0771be835153eba1602cc18c6640.bindPopup(popup_3ab762d2520f778963dcb9237fddde52)
+        ;
+
+        
+    
+    
+            marker_47dd0771be835153eba1602cc18c6640.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_58ba0fc73f8f8ed66173ddbd983352c8 = L.marker(
+                [55.867845, 37.552557],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_d44a491a537e0ad10453d42cc18b4097 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_58ba0fc73f8f8ed66173ddbd983352c8.setIcon(icon_d44a491a537e0ad10453d42cc18b4097);
+        
+    
+        var popup_f028c4f57bfded6ef9541c0f40dc7f98 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_f60564d427e63cc410ec236d2d6fa85c = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0KDQvtCz0LDRh9GR0LLRgdC60LjQuSDQv9C10YAuLCA0LCDQutC+0YDQvy4gMSwg0JzQvtGB0LrQstCwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjogMDk6MDAgLSAyMjowMC4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_f028c4f57bfded6ef9541c0f40dc7f98.setContent(i_frame_f60564d427e63cc410ec236d2d6fa85c);
+            
+        
+
+        marker_58ba0fc73f8f8ed66173ddbd983352c8.bindPopup(popup_f028c4f57bfded6ef9541c0f40dc7f98)
+        ;
+
+        
+    
+    
+            marker_58ba0fc73f8f8ed66173ddbd983352c8.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_2cfa820c8a5bb7c6eef3abd0ca060e4b = L.marker(
+                [55.737656, 37.526528],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_ab8dddcac1098718210a6e0324209e8c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_2cfa820c8a5bb7c6eef3abd0ca060e4b.setIcon(icon_ab8dddcac1098718210a6e0324209e8c);
+        
+    
+        var popup_3960dadb6e8e93b5f65ead38425d8a57 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_296b9b68b2e7c01fa4338db345cc0db0 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JrRg9GC0YPQt9C+0LLRgdC60LjQuSDQv9GA0L7RgdC/LiwgNDUsINCc0L7RgdC60LLQsDwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCf0L0uIC0g0LLRgS46IDA5OjAwIC0gMjI6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_3960dadb6e8e93b5f65ead38425d8a57.setContent(i_frame_296b9b68b2e7c01fa4338db345cc0db0);
+            
+        
+
+        marker_2cfa820c8a5bb7c6eef3abd0ca060e4b.bindPopup(popup_3960dadb6e8e93b5f65ead38425d8a57)
+        ;
+
+        
+    
+    
+            marker_2cfa820c8a5bb7c6eef3abd0ca060e4b.bindTooltip(
+                `<div>
+                     <i>Контейнер для батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_9d846bcff29796a9a52a46f4f764f3ee = L.marker(
+                [55.78155, 37.46982],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_4e00b522dd4b4852e8ef790920e42a0c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_9d846bcff29796a9a52a46f4f764f3ee.setIcon(icon_4e00b522dd4b4852e8ef790920e42a0c);
+        
+    
+        var popup_7e5523b8225a9f22ff226090fe036f57 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_5d551c160dc97b38822c8a24f7866de3 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0LHRg9C7LiDQk9C10L3QtdGA0LDQu9CwINCa0LDRgNCx0YvRiNC10LLQsCwgMTMsINC60L7RgNC/LiAxLCDQnNC+0YHQutCy0LA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwOTowMCAtIDIyOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_7e5523b8225a9f22ff226090fe036f57.setContent(i_frame_5d551c160dc97b38822c8a24f7866de3);
+            
+        
+
+        marker_9d846bcff29796a9a52a46f4f764f3ee.bindPopup(popup_7e5523b8225a9f22ff226090fe036f57)
+        ;
+
+        
+    
+    
+            marker_9d846bcff29796a9a52a46f4f764f3ee.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_5ce12a5bfab9e7edb59bc822ee4be6a0 = L.marker(
+                [55.806145, 37.39506],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_f7e6889a6413e8cfeae29353a1a2f3c6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_5ce12a5bfab9e7edb59bc822ee4be6a0.setIcon(icon_f7e6889a6413e8cfeae29353a1a2f3c6);
+        
+    
+        var popup_620bc2805306b743055216e90bb95272 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_f79e9d7ef1190404c417e2820131a2ba = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0KHRgtGA0L7Qs9C40L3RgdC60LjQuSDQsdGD0LsuLCAxLCDQnNC+0YHQutCy0LA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwODowMCAtIDIyOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_620bc2805306b743055216e90bb95272.setContent(i_frame_f79e9d7ef1190404c417e2820131a2ba);
+            
+        
+
+        marker_5ce12a5bfab9e7edb59bc822ee4be6a0.bindPopup(popup_620bc2805306b743055216e90bb95272)
+        ;
+
+        
+    
+    
+            marker_5ce12a5bfab9e7edb59bc822ee4be6a0.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ef2e33db3aa66d6500a6e1838b46bad1 = L.marker(
+                [55.674175, 37.525989],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_31a1ade4e14ff8ecd4086038c2e0c551 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ef2e33db3aa66d6500a6e1838b46bad1.setIcon(icon_31a1ade4e14ff8ecd4086038c2e0c551);
+        
+    
+        var popup_6aa2f953f2ebb4b3d17705d4f36d0d31 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_1152e81c7f1bc5c2ad74899c038af3c7 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JvQtdC90LjQvdGB0LrQuNC5INC/0YDQvtGB0L8uLCA5NSwg0JzQvtGB0LrQstCwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjogMDk6MDAgLSAyMjowMC4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_6aa2f953f2ebb4b3d17705d4f36d0d31.setContent(i_frame_1152e81c7f1bc5c2ad74899c038af3c7);
+            
+        
+
+        marker_ef2e33db3aa66d6500a6e1838b46bad1.bindPopup(popup_6aa2f953f2ebb4b3d17705d4f36d0d31)
+        ;
+
+        
+    
+    
+            marker_ef2e33db3aa66d6500a6e1838b46bad1.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a989759fba8c095a7a6d9329db3ccd91 = L.marker(
+                [55.653228, 37.725307],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_f1fad6d7d39e9903a17e4d2fa4e62f41 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a989759fba8c095a7a6d9329db3ccd91.setIcon(icon_f1fad6d7d39e9903a17e4d2fa4e62f41);
+        
+    
+        var popup_3d2d93bcb88f7b028b5041f91d11d02d = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_479eac8b484536c849b74c1508e8b2a7 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0J/QtdGA0LXRgNCy0LAsIDExLCDRgdGC0YAuIDI0PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjogMDg6MDAgLSAyMzowMC4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_3d2d93bcb88f7b028b5041f91d11d02d.setContent(i_frame_479eac8b484536c849b74c1508e8b2a7);
+            
+        
+
+        marker_a989759fba8c095a7a6d9329db3ccd91.bindPopup(popup_3d2d93bcb88f7b028b5041f91d11d02d)
+        ;
+
+        
+    
+    
+            marker_a989759fba8c095a7a6d9329db3ccd91.bindTooltip(
+                `<div>
+                     <i>Метломсталь</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_fe21aa359bfdae8a5e657d622c886129 = L.marker(
+                [55.640012, 37.792194],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_6bbf791277feb08955e0f3de9d508d11 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_fe21aa359bfdae8a5e657d622c886129.setIcon(icon_6bbf791277feb08955e0f3de9d508d11);
+        
+    
+        var popup_035c9cec01a5a0688cc0a44d0daf1615 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_c816543d628d0ec7457e264d8d36e340 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+MTAsINGB0YLRgC4gMiwg0K7Qs9C+LdCS0L7RgdGC0L7Rh9C90YvQuSDQsNC00LzQuNC90LjRgdGC0YDQsNGC0LjQstC90YvQuSDQvtC60YDRg9CzLCDRgNCw0LnQvtC9INCa0LDQv9C+0YLQvdGPLCAxLdC5INC60LLQsNGA0YLQsNC7PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_035c9cec01a5a0688cc0a44d0daf1615.setContent(i_frame_c816543d628d0ec7457e264d8d36e340);
+            
+        
+
+        marker_fe21aa359bfdae8a5e657d622c886129.bindPopup(popup_035c9cec01a5a0688cc0a44d0daf1615)
+        ;
+
+        
+    
+    
+            marker_fe21aa359bfdae8a5e657d622c886129.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c0dc78896153af2bacf64d9f8dd6d92a = L.marker(
+                [55.636355, 37.734811],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_502a5f1b5fc903efc36c85b2331d0783 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c0dc78896153af2bacf64d9f8dd6d92a.setIcon(icon_502a5f1b5fc903efc36c85b2331d0783);
+        
+    
+        var popup_5c9cfba587b35aa59af4156f8f6ca386 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_cc90a9ec697594a2331b53bbee4a862c = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0JHQvtGA0LjRgdC+0LLRgdC60LjQtSDQn9GA0YPQtNGLLCAzMSwg0YHRgtGALiAyODwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCa0YDRg9Cz0LvQvtGB0YPRgtC+0YfQvdC+Lgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_5c9cfba587b35aa59af4156f8f6ca386.setContent(i_frame_cc90a9ec697594a2331b53bbee4a862c);
+            
+        
+
+        marker_c0dc78896153af2bacf64d9f8dd6d92a.bindPopup(popup_5c9cfba587b35aa59af4156f8f6ca386)
+        ;
+
+        
+    
+    
+            marker_c0dc78896153af2bacf64d9f8dd6d92a.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1317bb3260b47be8cc8064908fd3ecd9 = L.marker(
+                [55.624806, 37.716277],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_50ea27cf9661eecb7a50beb8ece373b5 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1317bb3260b47be8cc8064908fd3ecd9.setIcon(icon_50ea27cf9661eecb7a50beb8ece373b5);
+        
+    
+        var popup_a2b844ec3d6da408c4220f06d5646a75 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_b50fe56ffd4604acdae93a6e78abe524 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JHQvtGA0LjRgdC+0LLRgdC60LjQuSDQv9GALiwgOC8xPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_a2b844ec3d6da408c4220f06d5646a75.setContent(i_frame_b50fe56ffd4604acdae93a6e78abe524);
+            
+        
+
+        marker_1317bb3260b47be8cc8064908fd3ecd9.bindPopup(popup_a2b844ec3d6da408c4220f06d5646a75)
+        ;
+
+        
+    
+    
+            marker_1317bb3260b47be8cc8064908fd3ecd9.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_971a119a3ff68ca1a4d2e33f26c939a6 = L.marker(
+                [55.601055, 37.736168],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_c66a33839605ab6c400049168137e469 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_971a119a3ff68ca1a4d2e33f26c939a6.setIcon(icon_c66a33839605ab6c400049168137e469);
+        
+    
+        var popup_bc20a2a64e7722f6fdb9b82d1a18ce91 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_4c0a80963458b8f049a992023b034eb5 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JXQu9C10YbQutCw0Y8g0YPQuy4sIDI0PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_bc20a2a64e7722f6fdb9b82d1a18ce91.setContent(i_frame_4c0a80963458b8f049a992023b034eb5);
+            
+        
+
+        marker_971a119a3ff68ca1a4d2e33f26c939a6.bindPopup(popup_bc20a2a64e7722f6fdb9b82d1a18ce91)
+        ;
+
+        
+    
+    
+            marker_971a119a3ff68ca1a4d2e33f26c939a6.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b1902134d67229f3116249da210aa0ea = L.marker(
+                [55.587558, 37.660457],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_f8943b142d7e900b648c2d12a0977a35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b1902134d67229f3116249da210aa0ea.setIcon(icon_f8943b142d7e900b648c2d12a0977a35);
+        
+    
+        var popup_f9e797ce392049ded2bfab5b8f5a2193 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_2df851dccb86059da42937bf60068cd8 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JvQtdCx0LXQtNGP0L3RgdC60LDRjyDRg9C7LiwgMywg0YHRgtGALiAxMTwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCa0YDRg9Cz0LvQvtGB0YPRgtC+0YfQvdC+Lgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_f9e797ce392049ded2bfab5b8f5a2193.setContent(i_frame_2df851dccb86059da42937bf60068cd8);
+            
+        
+
+        marker_b1902134d67229f3116249da210aa0ea.bindPopup(popup_f9e797ce392049ded2bfab5b8f5a2193)
+        ;
+
+        
+    
+    
+            marker_b1902134d67229f3116249da210aa0ea.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0c23ab5b32fc16b598eadd4a24b0499d = L.marker(
+                [55.598975, 37.635628],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_141dbb11cc169f8465e90af90a21341d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0c23ab5b32fc16b598eadd4a24b0499d.setIcon(icon_141dbb11cc169f8465e90af90a21341d);
+        
+    
+        var popup_0a939dbefffb45e1ceebc277cfdf3607 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_92c01dc864b917023d0a031a930d2017 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0J/QvtC00L7Qu9GM0YHQutC40YUg0JrRg9GA0YHQsNC90YLQvtCyLCAyMtCQLCDRgdGC0YAuIDI2PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_0a939dbefffb45e1ceebc277cfdf3607.setContent(i_frame_92c01dc864b917023d0a031a930d2017);
+            
+        
+
+        marker_0c23ab5b32fc16b598eadd4a24b0499d.bindPopup(popup_0a939dbefffb45e1ceebc277cfdf3607)
+        ;
+
+        
+    
+    
+            marker_0c23ab5b32fc16b598eadd4a24b0499d.bindTooltip(
+                `<div>
+                     <i>Вторпромлом</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_ab998e7f123ac1c93b8b249653680102 = L.marker(
+                [55.611694, 37.656894],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_51d03c0320d59bdcfaf03ade5f64a3ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_ab998e7f123ac1c93b8b249653680102.setIcon(icon_51d03c0320d59bdcfaf03ade5f64a3ce);
+        
+    
+        var popup_cb379a678b5b653b601147fba4104569 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_6d350d514f700d5e0a4d70d677b06887 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+Ni3RjyDQoNCw0LTQuNCw0LvRjNC90LDRjyDRg9C7LiwgMzAsINGB0YLRgC4gMjQ8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_cb379a678b5b653b601147fba4104569.setContent(i_frame_6d350d514f700d5e0a4d70d677b06887);
+            
+        
+
+        marker_ab998e7f123ac1c93b8b249653680102.bindPopup(popup_cb379a678b5b653b601147fba4104569)
+        ;
+
+        
+    
+    
+            marker_ab998e7f123ac1c93b8b249653680102.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_60ab75b27a611e6b8a4330da0c565669 = L.marker(
+                [55.605569, 37.647056],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_9be4cd633cab4e855c853cf57d5eccdd = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_60ab75b27a611e6b8a4330da0c565669.setIcon(icon_9be4cd633cab4e855c853cf57d5eccdd);
+        
+    
+        var popup_63f5f085514469c8f56d8c037bbb6c3d = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_303d40014abc41692b17972d7911ea40 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+Ni3RjyDQoNCw0LTQuNCw0LvRjNC90LDRjyDRg9C7LiwgMTUsINGB0YLRgC4gMTM8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9Li0g0LLRgS46IDA4OjAwIC0gMjM6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_63f5f085514469c8f56d8c037bbb6c3d.setContent(i_frame_303d40014abc41692b17972d7911ea40);
+            
+        
+
+        marker_60ab75b27a611e6b8a4330da0c565669.bindPopup(popup_63f5f085514469c8f56d8c037bbb6c3d)
+        ;
+
+        
+    
+    
+            marker_60ab75b27a611e6b8a4330da0c565669.bindTooltip(
+                `<div>
+                     <i>Площадка по приему металлолома Втормет Царицыно</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_00f1eeefe904288a6e20e6bcaf10dba6 = L.marker(
+                [55.629191, 37.637856],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_30c90cc332e82186d6aa13ee4d5ab0ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_00f1eeefe904288a6e20e6bcaf10dba6.setIcon(icon_30c90cc332e82186d6aa13ee4d5ab0ae);
+        
+    
+        var popup_d94623080cd7cd796e0e93726b9ab356 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_006737a354abe1ab5b5916808cfa77b4 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JrQsNCy0LrQsNC30YHQutC40Lkg0LHRg9C7LiwgNTYsINGB0YLRgC4gMTI8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9Li0g0LLRgS46IDEyOjAwIC0gMjA6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_d94623080cd7cd796e0e93726b9ab356.setContent(i_frame_006737a354abe1ab5b5916808cfa77b4);
+            
+        
+
+        marker_00f1eeefe904288a6e20e6bcaf10dba6.bindPopup(popup_d94623080cd7cd796e0e93726b9ab356)
+        ;
+
+        
+    
+    
+            marker_00f1eeefe904288a6e20e6bcaf10dba6.bindTooltip(
+                `<div>
+                     <i>Экоцентр Собиратор</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b471e1053a15da183ae0328f14bd387c = L.marker(
+                [55.613411, 37.588209],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_5f59d14e05addc025e80f9f496c897d7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b471e1053a15da183ae0328f14bd387c.setIcon(icon_5f59d14e05addc025e80f9f496c897d7);
+        
+    
+        var popup_46197e452c5a6621207a7367c4facc16 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_470f6da20b803e6e815e838663ae806f = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0JrRgNCw0YHQvdC+0LPQviDQnNCw0Y/QutCwLCAxNDwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCa0YDRg9Cz0LvQvtGB0YPRgtC+0YfQvdC+Lgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_46197e452c5a6621207a7367c4facc16.setContent(i_frame_470f6da20b803e6e815e838663ae806f);
+            
+        
+
+        marker_b471e1053a15da183ae0328f14bd387c.bindPopup(popup_46197e452c5a6621207a7367c4facc16)
+        ;
+
+        
+    
+    
+            marker_b471e1053a15da183ae0328f14bd387c.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_007ed98d688f64afbe0fa08bbc2efdd8 = L.marker(
+                [55.618754, 37.62706],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_9c18da96d22312ed99b4e3f45adc9412 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_007ed98d688f64afbe0fa08bbc2efdd8.setIcon(icon_9c18da96d22312ed99b4e3f45adc9412);
+        
+    
+        var popup_5d508917c62ed39fc73c496efac6d63f = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_d6d6127e4537353e6230b8adc335ccaf = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JTQvtGA0L7QttC90LDRjyDRg9C7LiwgMywg0LrQvtGA0L8uIDE8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_5d508917c62ed39fc73c496efac6d63f.setContent(i_frame_d6d6127e4537353e6230b8adc335ccaf);
+            
+        
+
+        marker_007ed98d688f64afbe0fa08bbc2efdd8.bindPopup(popup_5d508917c62ed39fc73c496efac6d63f)
+        ;
+
+        
+    
+    
+            marker_007ed98d688f64afbe0fa08bbc2efdd8.bindTooltip(
+                `<div>
+                     <i>Экотрейд</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b0070ff771393a842ab3dfd2735cd23f = L.marker(
+                [55.684882, 37.571019],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_2970404a06e612e3ef218450bcdb3edc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b0070ff771393a842ab3dfd2735cd23f.setIcon(icon_2970404a06e612e3ef218450bcdb3edc);
+        
+    
+        var popup_16abf60b3c1133354e3ff0ec3be5cb62 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_b7d78525549d4123647d30e7ee77accf = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0J/RgNC+0YTRgdC+0Y7Qt9C90LDRjyDRg9C7LiwgNS85PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjogMDk6MDAgLSAyMjowMC4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_16abf60b3c1133354e3ff0ec3be5cb62.setContent(i_frame_b7d78525549d4123647d30e7ee77accf);
+            
+        
+
+        marker_b0070ff771393a842ab3dfd2735cd23f.bindPopup(popup_16abf60b3c1133354e3ff0ec3be5cb62)
+        ;
+
+        
+    
+    
+            marker_b0070ff771393a842ab3dfd2735cd23f.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_936933a6e6f5d59a0dd5cc236d716112 = L.marker(
+                [55.70194, 37.588782],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_545b0d9bbac64ffaddc773dc943cb250 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_936933a6e6f5d59a0dd5cc236d716112.setIcon(icon_545b0d9bbac64ffaddc773dc943cb250);
+        
+    
+        var popup_d196294756f556b8708d189d431368d7 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_ed4e2d7751b7a4b95479a63c6cbf9df8 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0JLQsNCy0LjQu9C+0LLQsCwgOdCQLCDRgdGC0YAuIDIwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_d196294756f556b8708d189d431368d7.setContent(i_frame_ed4e2d7751b7a4b95479a63c6cbf9df8);
+            
+        
+
+        marker_936933a6e6f5d59a0dd5cc236d716112.bindPopup(popup_d196294756f556b8708d189d431368d7)
+        ;
+
+        
+    
+    
+            marker_936933a6e6f5d59a0dd5cc236d716112.bindTooltip(
+                `<div>
+                     <i>Приём Металлов</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_27decad74d9283ba6e78879afd7bda6f = L.marker(
+                [55.690863, 37.534437],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_f8431334b64f95f18e27bf2d08fa0dbc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_27decad74d9283ba6e78879afd7bda6f.setIcon(icon_f8431334b64f95f18e27bf2d08fa0dbc);
+        
+    
+        var popup_590d26e45e017e693a6d4ca24ab2f7f4 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_a5603de19b88de268b7f6d13dea0cf78 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0L/RgNC+0YHQvy4g0JLQtdGA0L3QsNC00YHQutC+0LPQviwgOS8xMDwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCd0LUg0YPQutCw0LfQsNC90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_590d26e45e017e693a6d4ca24ab2f7f4.setContent(i_frame_a5603de19b88de268b7f6d13dea0cf78);
+            
+        
+
+        marker_27decad74d9283ba6e78879afd7bda6f.bindPopup(popup_590d26e45e017e693a6d4ca24ab2f7f4)
+        ;
+
+        
+    
+    
+            marker_27decad74d9283ba6e78879afd7bda6f.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_87c322d111064e21cf3d285eb2639aa6 = L.marker(
+                [55.674175, 37.525989],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_44ce999cd6b4a9419c4313010af0228e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_87c322d111064e21cf3d285eb2639aa6.setIcon(icon_44ce999cd6b4a9419c4313010af0228e);
+        
+    
+        var popup_ff09b7ff7071f83ffbfa5c929eaac28c = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_ac443a8e57551840a7a30f59f881eab9 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JvQtdC90LjQvdGB0LrQuNC5INC/0YDQvtGB0L8uLCA5NTwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCf0L0uIC0g0LLRgS46IDA5OjAwIC0gMjI6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_ff09b7ff7071f83ffbfa5c929eaac28c.setContent(i_frame_ac443a8e57551840a7a30f59f881eab9);
+            
+        
+
+        marker_87c322d111064e21cf3d285eb2639aa6.bindPopup(popup_ff09b7ff7071f83ffbfa5c929eaac28c)
+        ;
+
+        
+    
+    
+            marker_87c322d111064e21cf3d285eb2639aa6.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d30ce797ba04daf82ba1d4f0466b45bf = L.marker(
+                [55.695175, 37.530363],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_5719f4088f54bb4b3b10a26644afc620 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d30ce797ba04daf82ba1d4f0466b45bf.setIcon(icon_5719f4088f54bb4b3b10a26644afc620);
+        
+    
+        var popup_ddf3856756fd261bceafb3db6c8376d7 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_ad6321a68f9012394d67a93856d63522 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JvQvtC80L7QvdC+0YHQvtCy0YHQutC40Lkg0L/RgNC+0YHQvy4sIDI1LCDQutC+0YDQvy4gMjwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCd0LUg0YPQutCw0LfQsNC90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_ddf3856756fd261bceafb3db6c8376d7.setContent(i_frame_ad6321a68f9012394d67a93856d63522);
+            
+        
+
+        marker_d30ce797ba04daf82ba1d4f0466b45bf.bindPopup(popup_ddf3856756fd261bceafb3db6c8376d7)
+        ;
+
+        
+    
+    
+            marker_d30ce797ba04daf82ba1d4f0466b45bf.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c91dec29f795c47df7cd2eb40fb8cd70 = L.marker(
+                [55.683603, 37.49107],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_3fa4fd3016e1cb0d554d669a738658f6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c91dec29f795c47df7cd2eb40fb8cd70.setIcon(icon_3fa4fd3016e1cb0d554d669a738658f6);
+        
+    
+        var popup_10b66301bd5f3c7fcb92380ee51d2a65 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_17d6c5b372b54c9071408e4dc8756e4b = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0KPQtNCw0LvRjNGG0L7QstCwLCA0MjwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCd0LUg0YPQutCw0LfQsNC90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_10b66301bd5f3c7fcb92380ee51d2a65.setContent(i_frame_17d6c5b372b54c9071408e4dc8756e4b);
+            
+        
+
+        marker_c91dec29f795c47df7cd2eb40fb8cd70.bindPopup(popup_10b66301bd5f3c7fcb92380ee51d2a65)
+        ;
+
+        
+    
+    
+            marker_c91dec29f795c47df7cd2eb40fb8cd70.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_0875dd0844287eeb0055f60224c5fef4 = L.marker(
+                [55.737656, 37.526528],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_ab89238ea47c6dcbef7b4aaafae46cec = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_0875dd0844287eeb0055f60224c5fef4.setIcon(icon_ab89238ea47c6dcbef7b4aaafae46cec);
+        
+    
+        var popup_2b860974b365ddb420ac3b27fc3dbc77 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_1961d88c81f5d489a772e06b5c634ec5 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JrRg9GC0YPQt9C+0LLRgdC60LjQuSDQv9GA0L7RgdC/LiwgNDU8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwOTowMCAtIDIyOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_2b860974b365ddb420ac3b27fc3dbc77.setContent(i_frame_1961d88c81f5d489a772e06b5c634ec5);
+            
+        
+
+        marker_0875dd0844287eeb0055f60224c5fef4.bindPopup(popup_2b860974b365ddb420ac3b27fc3dbc77)
+        ;
+
+        
+    
+    
+            marker_0875dd0844287eeb0055f60224c5fef4.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_8d29dd0a7483a303d11f0e7489fbea2d = L.marker(
+                [55.739867, 37.509346],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_48e750cb972b8dcb2ed8d9e2e83f679c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_8d29dd0a7483a303d11f0e7489fbea2d.setIcon(icon_48e750cb972b8dcb2ed8d9e2e83f679c);
+        
+    
+        var popup_a21b4a8b05f6f8134f476c179ad58538 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_8fc50da304de94a687e0d709f76fb986 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0J/RgNC+0LzRi9GI0LvQtdC90L3Ri9C5INC/0YAuLCA3LCDRgdGC0YAuIDM8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_a21b4a8b05f6f8134f476c179ad58538.setContent(i_frame_8fc50da304de94a687e0d709f76fb986);
+            
+        
+
+        marker_8d29dd0a7483a303d11f0e7489fbea2d.bindPopup(popup_a21b4a8b05f6f8134f476c179ad58538)
+        ;
+
+        
+    
+    
+            marker_8d29dd0a7483a303d11f0e7489fbea2d.bindTooltip(
+                `<div>
+                     <i>Life-Lom</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_90bc3b9ecdabf8c11918b16321c002b2 = L.marker(
+                [55.858336, 37.560161],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_b440f3d37de7815eba2044717659a66e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_90bc3b9ecdabf8c11918b16321c002b2.setIcon(icon_b440f3d37de7815eba2044717659a66e);
+        
+    
+        var popup_a5b4971f7325b6295cd789a026dd10b3 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_155309c7cfece1ab87ac51ec06d42f7b = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JTQvNC40YLRgNC+0LLRgdC60L7QtSDRiC4sIDY4LCDQnNC+0YHQutCy0LA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwODowMCAtIDIyOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_a5b4971f7325b6295cd789a026dd10b3.setContent(i_frame_155309c7cfece1ab87ac51ec06d42f7b);
+            
+        
+
+        marker_90bc3b9ecdabf8c11918b16321c002b2.bindPopup(popup_a5b4971f7325b6295cd789a026dd10b3)
+        ;
+
+        
+    
+    
+            marker_90bc3b9ecdabf8c11918b16321c002b2.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_348e35c980e756c05ef8c376d2092acb = L.marker(
+                [55.856839, 37.582082],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_5b6704f1de2dd14277307c81ffda8c48 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_348e35c980e756c05ef8c376d2092acb.setIcon(icon_5b6704f1de2dd14277307c81ffda8c48);
+        
+    
+        var popup_a41d074b96b3b2c7c5d8cc40413a2adc = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_74b6d6b1dfccbe20b789915cbff4b47a = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JDQu9GC0YPRhNGM0LXQstGB0LrQvtC1INGILiwgMjfQkCwg0YHRgtGALiAxMTwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCf0L0uIC0g0LLRgS46INCa0YDRg9Cz0LvQvtGB0YPRgtC+0YfQvdC+Lgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_a41d074b96b3b2c7c5d8cc40413a2adc.setContent(i_frame_74b6d6b1dfccbe20b789915cbff4b47a);
+            
+        
+
+        marker_348e35c980e756c05ef8c376d2092acb.bindPopup(popup_a41d074b96b3b2c7c5d8cc40413a2adc)
+        ;
+
+        
+    
+    
+            marker_348e35c980e756c05ef8c376d2092acb.bindTooltip(
+                `<div>
+                     <i>РусЭкоЛом</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7927dd7c9b8c01056701b8365e591ed9 = L.marker(
+                [55.880172, 37.533298],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_c4fc8c05c9ab378f01c3ce4bbdb41517 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7927dd7c9b8c01056701b8365e591ed9.setIcon(icon_c4fc8c05c9ab378f01c3ce4bbdb41517);
+        
+    
+        var popup_c91774bda177e92595de4d2248007888 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_b508dcce8f83952e0044cffbd30686e6 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0KHQvtGE0YzQuCDQmtC+0LLQsNC70LXQstGB0LrQvtC5LCA0PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjogMDk6MDAgLSAyMjowMC4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_c91774bda177e92595de4d2248007888.setContent(i_frame_b508dcce8f83952e0044cffbd30686e6);
+            
+        
+
+        marker_7927dd7c9b8c01056701b8365e591ed9.bindPopup(popup_c91774bda177e92595de4d2248007888)
+        ;
+
+        
+    
+    
+            marker_7927dd7c9b8c01056701b8365e591ed9.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_7cd4eb53f4b343995427736d95096168 = L.marker(
+                [55.875272, 37.512425],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_8738ed36b4be4bd58c7092a1eb70b464 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_7cd4eb53f4b343995427736d95096168.setIcon(icon_8738ed36b4be4bd58c7092a1eb70b464);
+        
+    
+        var popup_2ff1acb9369f6b02b350d5d0b42c5bd9 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_28b4f383a9fe2858972c177715ef0129 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0J3QvtCy0LDRjyDRg9C7LiwgMTA8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwOTowMCAtIDIyOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_2ff1acb9369f6b02b350d5d0b42c5bd9.setContent(i_frame_28b4f383a9fe2858972c177715ef0129);
+            
+        
+
+        marker_7cd4eb53f4b343995427736d95096168.bindPopup(popup_2ff1acb9369f6b02b350d5d0b42c5bd9)
+        ;
+
+        
+    
+    
+            marker_7cd4eb53f4b343995427736d95096168.bindTooltip(
+                `<div>
+                     <i>Пункт приема батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_d3089614d2548767cb870b718c8f7ec1 = L.marker(
+                [55.886831, 37.543597],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_fe88645dd560c25c4db33c1ac222992c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_d3089614d2548767cb870b718c8f7ec1.setIcon(icon_fe88645dd560c25c4db33c1ac222992c);
+        
+    
+        var popup_dc997dcce944973f8de67f82c98d939f = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_938eb106760bb36f9770c029328d8186 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JTQvNC40YLRgNC+0LLRgdC60L7QtSDRiC4sIDEwONCRLCDRgdGC0YAuIDE8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_dc997dcce944973f8de67f82c98d939f.setContent(i_frame_938eb106760bb36f9770c029328d8186);
+            
+        
+
+        marker_d3089614d2548767cb870b718c8f7ec1.bindPopup(popup_dc997dcce944973f8de67f82c98d939f)
+        ;
+
+        
+    
+    
+            marker_d3089614d2548767cb870b718c8f7ec1.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1a7d1f133ab4239c7c4b656d5b32047c = L.marker(
+                [55.877367, 37.558623],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_7b20777112f28b410083c601f1fb813d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1a7d1f133ab4239c7c4b656d5b32047c.setIcon(icon_7b20777112f28b410083c601f1fb813d);
+        
+    
+        var popup_a69d6bd9ce23104b27d13e65f57cb736 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_d317f9d516df16742d77cdd9fd47640e = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JTRg9Cx0L3QuNC90YHQutCw0Y8g0YPQuy4sIDMwPC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_a69d6bd9ce23104b27d13e65f57cb736.setContent(i_frame_d317f9d516df16742d77cdd9fd47640e);
+            
+        
+
+        marker_1a7d1f133ab4239c7c4b656d5b32047c.bindPopup(popup_a69d6bd9ce23104b27d13e65f57cb736)
+        ;
+
+        
+    
+    
+            marker_1a7d1f133ab4239c7c4b656d5b32047c.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_81db6a80f6e9fbf3ea59fc3066513552 = L.marker(
+                [55.802162, 37.587154],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_02915c719e74a42ecd484307f8a53e44 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_81db6a80f6e9fbf3ea59fc3066513552.setIcon(icon_02915c719e74a42ecd484307f8a53e44);
+        
+    
+        var popup_3dff701c30aede6f2c5dec08c9c4fab0 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_0d0477640ca27573eefb757aaa873a18 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0KHQsNCy0ZHQu9C+0LLRgdC60LDRjyDQu9C40L3QuNGPLCA1PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0J/QvS4gLSDQstGBLjog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_3dff701c30aede6f2c5dec08c9c4fab0.setContent(i_frame_0d0477640ca27573eefb757aaa873a18);
+            
+        
+
+        marker_81db6a80f6e9fbf3ea59fc3066513552.bindPopup(popup_3dff701c30aede6f2c5dec08c9c4fab0)
+        ;
+
+        
+    
+    
+            marker_81db6a80f6e9fbf3ea59fc3066513552.bindTooltip(
+                `<div>
+                     <i>Приём металлолома</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_34cabe8dafb39c42fa57aa871b677f91 = L.marker(
+                [55.819869, 37.634953],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_61446ac61e2ff802a22211da61c08ca4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_34cabe8dafb39c42fa57aa871b677f91.setIcon(icon_61446ac61e2ff802a22211da61c08ca4);
+        
+    
+        var popup_4cad4f6435d9936bc76a3168fb3810f0 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_da039a98ef7dfca14a5358ddeb71ce9b = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0YPQuy4g0JrQvtC90LTRgNCw0YLRjtC60LAsIDQ8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwODowMCAtIDIwOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_4cad4f6435d9936bc76a3168fb3810f0.setContent(i_frame_da039a98ef7dfca14a5358ddeb71ce9b);
+            
+        
+
+        marker_34cabe8dafb39c42fa57aa871b677f91.bindPopup(popup_4cad4f6435d9936bc76a3168fb3810f0)
+        ;
+
+        
+    
+    
+            marker_34cabe8dafb39c42fa57aa871b677f91.bindTooltip(
+                `<div>
+                     <i>Пункт приема металлолома</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_df12f5ae9b5635085d22ccf11575b65e = L.marker(
+                [55.812846, 37.648807],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_8dc8223102710fa860a40d911f94ce5e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_df12f5ae9b5635085d22ccf11575b65e.setIcon(icon_8dc8223102710fa860a40d911f94ce5e);
+        
+    
+        var popup_f495cb32fa1271fd60a7df90a1229d04 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_8a806b975fd7226a3510249c6e0fdbf3 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JzQsNC70L7QvNC+0YHQutC+0LLRgdC60LDRjyDRg9C7LiwgMTQ8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwODowMCAtIDIzOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_f495cb32fa1271fd60a7df90a1229d04.setContent(i_frame_8a806b975fd7226a3510249c6e0fdbf3);
+            
+        
+
+        marker_df12f5ae9b5635085d22ccf11575b65e.bindPopup(popup_f495cb32fa1271fd60a7df90a1229d04)
+        ;
+
+        
+    
+    
+            marker_df12f5ae9b5635085d22ccf11575b65e.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_b312d310fee268f570e9816678f70ebf = L.marker(
+                [55.814147, 37.660531],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_a771e7e3c7e87d9ebf249820daae61e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_b312d310fee268f570e9816678f70ebf.setIcon(icon_a771e7e3c7e87d9ebf249820daae61e7);
+        
+    
+        var popup_2e82f22b430e3b4d075e1e2a9d5c9d2a = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_7d26692b9b8b953f40bf051a20127e51 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0KDQuNC20YHQutC40Lkg0L/RgC4sIDc8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQn9C9LiAtINCy0YEuOiAwOTowMCAtIDIyOjAwLgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_2e82f22b430e3b4d075e1e2a9d5c9d2a.setContent(i_frame_7d26692b9b8b953f40bf051a20127e51);
+            
+        
+
+        marker_b312d310fee268f570e9816678f70ebf.bindPopup(popup_2e82f22b430e3b4d075e1e2a9d5c9d2a)
+        ;
+
+        
+    
+    
+            marker_b312d310fee268f570e9816678f70ebf.bindTooltip(
+                `<div>
+                     <i>Пункт батареек</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_18ba89c0e159895f54237312eb2cf841 = L.marker(
+                [55.778228, 37.683541],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_6e8deaec19232bf6f810e958973deeb2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_18ba89c0e159895f54237312eb2cf841.setIcon(icon_6e8deaec19232bf6f810e958973deeb2);
+        
+    
+        var popup_66bb4168e632ed7c3ed414e4a7cafca9 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_3506f989270e26c0641ab2fe5f224658 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0J3QsNC70LXRgdC90YvQuSDQv9C10YAuLCA2LCDRgdGC0YAuIDM8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_66bb4168e632ed7c3ed414e4a7cafca9.setContent(i_frame_3506f989270e26c0641ab2fe5f224658);
+            
+        
+
+        marker_18ba89c0e159895f54237312eb2cf841.bindPopup(popup_66bb4168e632ed7c3ed414e4a7cafca9)
+        ;
+
+        
+    
+    
+            marker_18ba89c0e159895f54237312eb2cf841.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_c6249fc34a82ee57b304f32c80e00b55 = L.marker(
+                [55.782334, 37.677878],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_f1b1d0c72c8a43fa466eae6958f42f5d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_c6249fc34a82ee57b304f32c80e00b55.setIcon(icon_f1b1d0c72c8a43fa466eae6958f42f5d);
+        
+    
+        var popup_2a6c19a5a004f1e8103178fee4a75949 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_3edf3865a72214c37757b86271d19bdc = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JvQtdGB0L3QvtGA0Y/QtNGB0LrQuNC5INC/0LXRgC4sIDE4LCDRgdGC0YAuIDE8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_2a6c19a5a004f1e8103178fee4a75949.setContent(i_frame_3edf3865a72214c37757b86271d19bdc);
+            
+        
+
+        marker_c6249fc34a82ee57b304f32c80e00b55.bindPopup(popup_2a6c19a5a004f1e8103178fee4a75949)
+        ;
+
+        
+    
+    
+            marker_c6249fc34a82ee57b304f32c80e00b55.bindTooltip(
+                `<div>
+                     <i>АКБ.ру</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_1996df4eeebd48fa0c2c191914ed450c = L.marker(
+                [55.75016, 37.724039],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_1b7f469ed811ba01f3c0c41f4e7503e2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_1996df4eeebd48fa0c2c191914ed450c.setIcon(icon_1b7f469ed811ba01f3c0c41f4e7503e2);
+        
+    
+        var popup_750fec8ddf84f4911b41cdb0a362053c = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_3d729ae6a08a68fae72f8f00aee09938 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+MS3RjyDRg9C7LiDQrdC90YLRg9C30LjQsNGB0YLQvtCyLCA2LCDRgdGC0YAuIDk8L2k+IDxpPtCS0YDQtdC80Y8g0YDQsNCx0L7RgtGLOiDQmtGA0YPQs9C70L7RgdGD0YLQvtGH0L3Qvi4KPC9pPjxicj4gPGJ1dHRvbj7Qn9GD0L3QutGCINC30LDQv9C+0LvQvdC10L08L2J1dHRvbj4gICAgPGJ1dHRvbj7Qn9GD0L3QutGCINC/0YPRgdGC0L7QuTwvYnV0dG9uPg==" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_750fec8ddf84f4911b41cdb0a362053c.setContent(i_frame_3d729ae6a08a68fae72f8f00aee09938);
+            
+        
+
+        marker_1996df4eeebd48fa0c2c191914ed450c.bindPopup(popup_750fec8ddf84f4911b41cdb0a362053c)
+        ;
+
+        
+    
+    
+            marker_1996df4eeebd48fa0c2c191914ed450c.bindTooltip(
+                `<div>
+                     <i>Приём металлолома</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_e21ee63b37b336e7362dc36a52be5335 = L.marker(
+                [55.691014, 37.759479],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_03fd9735467f297450fff4f1809020a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_e21ee63b37b336e7362dc36a52be5335.setIcon(icon_03fd9735467f297450fff4f1809020a0);
+        
+    
+        var popup_703fdf10b2454a1ebd88fcc57dd2c767 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_ec0a9df3e68d3bd662b7eb84cc7a1803 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0JrRgNCw0YHQvdC+0LTQvtC90YHQutCw0Y8g0YPQuy4sIDkvMjwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCf0L0uIC0g0LLRgS46IDA4OjAwIC0gMTY6MDAuCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_703fdf10b2454a1ebd88fcc57dd2c767.setContent(i_frame_ec0a9df3e68d3bd662b7eb84cc7a1803);
+            
+        
+
+        marker_e21ee63b37b336e7362dc36a52be5335.bindPopup(popup_703fdf10b2454a1ebd88fcc57dd2c767)
+        ;
+
+        
+    
+    
+            marker_e21ee63b37b336e7362dc36a52be5335.bindTooltip(
+                `<div>
+                     <i>Металлолом. Приём плат</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_979dae4354244a39b437c981ee599328 = L.marker(
+                [55.672231, 37.805454],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_61b3f4b5bd5e721b6d3287366c4cd197 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_979dae4354244a39b437c981ee599328.setIcon(icon_61b3f4b5bd5e721b6d3287366c4cd197);
+        
+    
+        var popup_079f855053b0b3a12484ddc2afece741 = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_81681d0489e67a32691ed86b67d4b3d6 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+0KHRgtCw0LLRgNC+0L/QvtC70YzRgdC60LDRjyDRg9C7LiwgODQsINGB0YLRgC4gMzwvaT4gPGk+0JLRgNC10LzRjyDRgNCw0LHQvtGC0Ys6INCa0YDRg9Cz0LvQvtGB0YPRgtC+0YfQvdC+Lgo8L2k+PGJyPiA8YnV0dG9uPtCf0YPQvdC60YIg0LfQsNC/0L7Qu9C90LXQvTwvYnV0dG9uPiAgICA8YnV0dG9uPtCf0YPQvdC60YIg0L/Rg9GB0YLQvtC5PC9idXR0b24+" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_079f855053b0b3a12484ddc2afece741.setContent(i_frame_81681d0489e67a32691ed86b67d4b3d6);
+            
+        
+
+        marker_979dae4354244a39b437c981ee599328.bindPopup(popup_079f855053b0b3a12484ddc2afece741)
+        ;
+
+        
+    
+    
+            marker_979dae4354244a39b437c981ee599328.bindTooltip(
+                `<div>
+                     <i>Металлолом МСК</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var marker_a65f57f944e457c28d126511ba85e22e = L.marker(
+                [55.709039, 37.606695],
+                {}
+            ).addTo(marker_cluster_a698bd9a9bba9d4b06519e5ff90dcb2d);
+        
+    
+            var icon_2d6f4a5484a08c4bc2569a4c8345cc58 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "fa-recycle", "iconColor": "white", "markerColor": "green", "prefix": "fa"}
+            );
+            marker_a65f57f944e457c28d126511ba85e22e.setIcon(icon_2d6f4a5484a08c4bc2569a4c8345cc58);
+        
+    
+        var popup_b6d2c971f7c68dcba613a10749f9ed3e = L.popup({"maxWidth": 230, "minWidth": 230});
+
+        
+            
+                var i_frame_a239da9ce738b2033f1d242cfca7a853 = $(`<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><iframe src="data:text/html;charset=utf-8;base64,CiAgICAgPGk+MS3QuSDQoNC+0YnQuNC90YHQutC40Lkg0L/RgC4sIDM3PC9pPiA8aT7QktGA0LXQvNGPINGA0LDQsdC+0YLRizog0JrRgNGD0LPQu9C+0YHRg9GC0L7Rh9C90L4uCjwvaT48YnI+IDxidXR0b24+0J/Rg9C90LrRgiDQt9Cw0L/QvtC70L3QtdC9PC9idXR0b24+ICAgIDxidXR0b24+0J/Rg9C90LrRgiDQv9GD0YHRgtC+0Lk8L2J1dHRvbj4=" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;"></iframe></div></div>`)[0];
+                popup_b6d2c971f7c68dcba613a10749f9ed3e.setContent(i_frame_a239da9ce738b2033f1d242cfca7a853);
+            
+        
+
+        marker_a65f57f944e457c28d126511ba85e22e.bindPopup(popup_b6d2c971f7c68dcba613a10749f9ed3e)
+        ;
+
+        
+    
+    
+            marker_a65f57f944e457c28d126511ba85e22e.bindTooltip(
+                `<div>
+                     <i>Приём металлолома</i>
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
